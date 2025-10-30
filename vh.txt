@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+ServerName proyecto74.local
+DocumentRoot "C:/apache/apache82/htdocs/proyectos_php74"
+FcgidInitialEnv PHPRC "C:/php74"
+FcgidWrapper "C:/php74/php-cgi.exe" .php
+AddHandler fcgid-script .php
+<Directory "C:/apache/apache82/htdocs/proyectos_php74">
+		AllowOverride All
+		Require all granted
+		Options +Indexes +FollowSymLinks +ExecCgi
+</Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+ServerName proyecto82.local
+DocumentRoot "C:/apache/apache82/htdocs/proyectos_php8"
+FcgidInitialEnv PHPRC "C:/php8"
+FcgidWrapper "C:/php8/php-cgi.exe" .php
+AddHandler fcgid-script .php
+<Directory "C:/apache/apache82/htdocs/proyectos_php8">
+		AllowOverride All
+		Require all granted
+		Options +Indexes +FollowSymLinks +ExecCgi
+</Directory>
+</VirtualHost>
